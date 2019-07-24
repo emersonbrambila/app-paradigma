@@ -1,0 +1,547 @@
+@charset "utf-8";
+@import url("bootstrap-reboot.min.css");
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic:400,700');
+
+
+/* Reseta Elementos */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+textarea,
+select,
+radio,
+checkbox,
+fieldset,
+form,
+input,
+button,
+reset,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Estilos do Body */
+
+* {
+  color: #ffffff;
+  transition .05s all linear;
+}
+
+html,
+body,
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #fff;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    height: 100%;
+}
+
+::-moz-selection {
+    background: #0f0f0f;
+}
+
+::selection {
+    background: #0f0f0f;
+}
+
+.d-block {
+    display: block;
+}
+
+.clearfix {
+    display: block;
+    clear: both;
+}
+
+/* Estilo */
+
+#main,
+#quem-somos,
+#jobs {
+    display: block;
+}
+
+
+header,
+.topo,
+#quem-somos,
+#jobs {
+    height: 100%;
+}
+
+.logo {
+    width: 25%;
+    margin: 0 auto;
+    padding: 5em 0;
+    display: block;
+}
+
+.content {
+    display: block;
+    padding: 5em 0;
+}
+
+.t-h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #484848;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* Animação Titulo Topo */
+
+.typewriter {
+    width: 100%;
+}
+
+.typewriter h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    font-size: calc(9rem + 6 * ((100vw - 320px) / 680));
+    font-weight: 900;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .02em solid #fff;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+    width: 80%;
+    display: block;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}
+
+/* Scroll */
+
+.scroll {
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    bottom: 0;
+    z-index: 10;
+    height: 60vh;
+    width: 1px;
+    background-color: #484848;
+}
+
+.scroll:after {
+    content: "Scroll";
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-top: -32px;
+    color: #484848c4;
+    transform: rotate(-90deg) translateX(-50%)
+}
+
+.scroll-content {
+    height: 100%;
+}
+
+/* Centraliza conteudo vertical */
+
+#quem-somos .container,
+#jobs .container {
+    position: relative;
+    padding: 0;
+}
+
+#t {
+    padding: 1em;
+    position: relative;
+    top: 50%;
+}
+
+#j {
+    padding: 1em;
+    position: relative;
+    top: 20%;
+}
+
+.table-jobs {
+    padding: 1em;
+    position: relative;
+    top: 20%;
+    display: block;
+    float: left;
+}
+
+/* Quem Somos */
+
+
+
+#t h2,
+#j h2 {
+    text-align: center;
+    font-family: 'Gentium Basic', serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #7d7d7d;
+    font-weight: bold;
+    line-height: 2.2em;
+}
+
+#t p,
+#j p {
+    text-align: center;
+    padding: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.3em;
+}
+
+/* Jobs */
+
+.jb-1,
+.jb-2,
+.jb-3,
+.jb-4,
+.jb-5 {
+    border: 1px solid #fff;
+    float: left;
+    display: block;
+    padding: 0;
+}
+
+.diagram {
+    border-bottom: 1px solid #fff;
+    margin: 0;
+    padding: 0.5em;
+    font-size: 12px;
+    padding-left: 15px;
+    font-weight: 300;
+}
+
+.jb-content {
+    padding: 2em;
+}
+
+.i-idt {
+    padding-left: 3em;
+}
+
+.jb-content p {
+    padding-left: 3em;
+}
+
+
+/* Objetos Fixos */
+
+.contato {
+    text-decoration: none;
+    transform: rotate(90deg);
+    font-size: 1rem;
+    text-align: right;
+    list-style: none;
+    position: fixed;
+    bottom: 371px;
+    left: -63px;
+    z-index: 1;
+}
+
+.contato ul li,
+.social ul li {
+    display: -webkit-box;
+    text-decoration: none;
+    list-style: none;
+    text-align: -webkit-center;
+    z-index: 1;
+}
+
+.contato .tel,
+.contato .email,
+.contato span {
+    color: #fff;
+    font-size: 1rem;
+    padding: 6px 0;
+    display: -webkit-inline-box;
+    text-transform: uppercase;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.social {
+    width: 7rem;
+    height: auto;
+    text-align: center;
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    z-index: 1;
+}
+
+.social ul li img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    padding: 13px;
+    z-index: 1;
+}
+
+#fcontato {
+    width: 19rem;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1;
+}
+
+.btn-contato {
+    display: block;
+}
+
+.btn-contato {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Gentium Basic', serif;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: transparent;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-contato:focus {
+    outline: 0;
+}
+
+.btn-contato h2 {
+    font-size: 0.6em;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-element input {
+    background: transparent;
+    font-size: 0.8rem;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    max-height: 40px;
+}
+
+.form-element textarea {
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 10px;
+    background: transparent;
+    border-bottom: .1rem solid #fff;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 1rem 1rem 0;
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.2em;
+    resize: none;
+    cursor: text;
+}
+
+.form-element textarea:focus {
+    height: 8rem;
+}
+
+#result {
+    text-align: center;
+    display: block;
+}
+
+/* noise */
+.noise {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .05;
+    background: #fff;
+}
+
+/* animações */
+
+.btn-contato,
+.form-element textarea:focus,
+.hidden,
+#fcontato,
+#form-ajax {
+    webkit-transition: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -moz-transition: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -o-transition: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition: all 250ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
